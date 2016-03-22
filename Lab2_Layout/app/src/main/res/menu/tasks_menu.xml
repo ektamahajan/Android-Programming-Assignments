@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <menu xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context="com.example.newuser.lab2_layout.MainActivity">
+
+
+        <item
+
+        android:id="@+id/action_CoverPage"
+        android:orderInCategory="100"
+        android:title="Cover Page" />
+
+
+
+
+         <item
+
+            android:id="@+id/action_LinearLayout"
+            android:orderInCategory="100"
+            android:title="Linear Layout" />
+
+        <item
+
+            android:id="@+id/action_RelativeLayout"
+            android:orderInCategory="100"
+            android:title="Relative Layout" />
+
+        <item
+
+            android:id="@+id/action_NumberPad"
+            android:orderInCategory="100"
+            android:title="Number Pad" />
+
+        <item
+
+            android:id="@+id/action_ControlEvents"
+            android:orderInCategory="100"
+            android:title="Control and Events" />
+
+
+    </menu>
