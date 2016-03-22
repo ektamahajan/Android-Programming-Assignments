@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.newuser.lab3_fragment.LinearLayout">
+
+
+
+    <Button
+        android:layout_width="fill_parent"
+        android:textAllCaps="false"
+        android:layout_height="100dp"
+        android:textSize="20dp"
+        android:textColor="@color/frontPage"
+        android:background="@color/actionBar"
+        android:textStyle="bold"
+        android:id="@+id/button_frozen"
+        android:text="Frozen" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:textAllCaps="false"
+        android:layout_height="100dp"
+        android:textColor="@color/colorAccent"
+        android:background="@color/actionBar2"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:id="@+id/button_starwar"
+        android:text="Star War" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:textAllCaps="false"
+        android:layout_height="100dp"
+        android:textSize="20dp"
+        android:textColor="@color/frontPage"
+        android:background="@color/actionBar"
+        android:textStyle="bold"
+        android:id="@+id/button_lionking"
+        android:text="Lion King" />
+
+
+    <Button
+        android:layout_width="fill_parent"
+        android:textAllCaps="false"
+        android:layout_height="100dp"
+        android:textSize="20dp"
+        android:textColor="@color/colorAccent"
+        android:background="@color/actionBar2"
+        android:textStyle="bold"
+        android:id="@+id/button_transformer"
+        android:text="Transformer" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:textAllCaps="false"
+        android:layout_height="100dp"
+        android:textColor="@color/frontPage"
+        android:background="@color/actionBar"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:id="@+id/button_avatar"
+        android:text="Avatar" />
+
+</LinearLayout>
