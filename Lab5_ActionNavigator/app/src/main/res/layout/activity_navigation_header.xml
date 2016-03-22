@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="190dp"
+    android:orientation="vertical"
+    android:background="@drawable/navigation_header_img"
+    tools:context="com.example.newuser.lab5_actionnavigator.MainActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+
+        android:id="@+id/profile_image"
+        android:layout_width="76dp"
+        android:layout_height="76dp"
+        android:layout_marginLeft="24dp"
+        android:src="@drawable/navigator_img"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="24dp" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Ekta Mahajan"
+        android:layout_below="@+id/profile_image"
+        android:textStyle="bold"
+        android:layout_marginLeft="20dp"
+        android:textSize="15dp"/>
+
+    <TextView
+        android:id="@+id/emailid"
+        android:layout_width="wrap_content"
+        android:text="emahajan@syr.edu"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:layout_marginLeft="20dp"
+        android:textSize="15dp"/>
+
+    </RelativeLayout>
