@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fragment0"
+    android:background="@color/frontPage"
+    tools:context="com.example.newuser.lab3_fragment.frontPageFragment">
+
+    <TextView
+        android:id="@+id/andro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:textSize="25sp"
+        android:textColor="@color/text_color"
+        android:text="Android Programming"
+        android:textAlignment="center"/>
+
+    <ImageView
+
+        android:layout_width="200dp"
+        android:layout_height="250dp"
+        android:id="@+id/imgvi1"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/andro"
+        android:src="@drawable/frontpage_pic"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+
+        android:layout_width="wrap_content"
+        android:textAllCaps="false"
+        android:layout_below="@+id/imgvi1"
+        android:textColor="@color/frontPage"
+        android:background="@color/actionBar"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:id="@+id/aboutMe"
+        android:text="About Me" />
+
+
+
+    <Button
+
+        android:layout_width="wrap_content"
+        android:textAllCaps="false"
+        android:layout_height="wrap_content"
+        android:id="@+id/recyclerPage"
+        android:textColor="@color/frontPage"
+        android:background="@color/actionBar"
+        android:layout_marginLeft="70dp"
+        android:layout_toRightOf="@+id/aboutMe"
+        android:layout_alignBaseline="@+id/aboutMe"
+        android:layout_below="@+id/imgvi1"
+        android:text="Recycler View" />
+
+
+
+</RelativeLayout>

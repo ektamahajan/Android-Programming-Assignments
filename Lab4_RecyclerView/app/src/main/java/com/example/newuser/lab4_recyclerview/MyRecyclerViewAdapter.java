@@ -1,0 +1,167 @@
+package com.example.newuser.lab4_recyclerview;
+
+import android.content.Context;
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.CheckBox;
+import android.widget.ImageView;
+import android.widget.RatingBar;
+import android.widget.TextView;
+import java.util.List;
+import java.util.Map;
+
+/**
+ * Created by newuser on 2/17/16.
+ */
+public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAdapter.ViewHolder>
+{
+
+    private List<Map<String,?>> mDataSet;
+    private Context context;
+    OnItemClickListener mItemClickListener;
+
+    public MyRecyclerViewAdapter(Context myContext,List<Map<String,?>> myDataSet)
+    {
+        context = myContext;
+        mDataSet = myDataSet;
+    }
+
+    public interface OnItemClickListener
+    {
+        public void onItemClick(View view ,int position);
+        public void onItemLongClick(View view, int position);
+    }
+
+
+
+    public void setOnItemClickListener(final OnItemClickListener mItemClickListener)
+    {
+        this.mItemClickListener = mItemClickListener;
+    }
+
+    @Override
+    public int getItemViewType(int position)
+    {
+        Map<String,?>movie = mDataSet.get(position);
+        double r = (Double) movie.get("rating");
+        float f = (float)r;
+        if (f>=8.0)
+        {
+            return 0;
+        }
+        else
+        {
+            return 1;
+        }
+
+    }
+
+
+    @Override
+    public MyRecyclerViewAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType)
+    {
+        View v;
+
+        switch (viewType)
+        {
+            case 0:
+                v = LayoutInflater.from(parent.getContext())
+                        .inflate(R.layout.activity_cardview,parent,false);
+                break;
+            case 1:
+                v = LayoutInflater.from(parent.getContext())
+                        .inflate(R.layout.activity_cardview2,parent,false);
+                break;
+            default:
+                v = LayoutInflater.from(parent.getContext())
+                        .inflate(R.layout.activity_cardview,parent,false);
+                break;
+        }
+
+        ViewHolder vh = new ViewHolder(v);
+        return vh;
+    }
+
+
+
+    @Override
+    public void onBindViewHolder(ViewHolder holder, int position)
+    {
+        Map<String,?> movie = mDataSet.get(position);
+        holder.bindMovieData(movie);
+    }
+
+    @Override
+    public int getItemCount() {
+        return mDataSet.size();
+    }
+
+    public class ViewHolder extends RecyclerView.ViewHolder
+    {
+        public ImageView vIcon;
+        public TextView vTitle;
+        public TextView vDescription;
+        public CheckBox vCheckBox;
+        public RatingBar vRating;
+
+        public ViewHolder(View v) {
+            super(v);
+            vIcon = (ImageView) v.findViewById(R.id.icon);
+            vTitle = (TextView) v.findViewById(R.id.title);
+            vDescription = (TextView) v.findViewById(R.id.description);
+            vCheckBox = (CheckBox) v.findViewById(R.id.selection);
+            vRating = (RatingBar) v.findViewById(R.id.rating);
+
+            v.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (mItemClickListener != null) {
+                        mItemClickListener.onItemClick(v, getPosition());
+                    }
+                }
+
+
+            });
+
+            v.setOnLongClickListener(new View.OnLongClickListener(){
+
+                @Override
+                public boolean onLongClick(View v) {
+                    if (mItemClickListener != null) {
+                        mItemClickListener.onItemLongClick(v, getPosition());
+                    }return  true;
+                }
+
+            });
+
+        }
+
+        public void bindMovieData(final Map<String,?>movie)
+        {
+            vTitle.setText((String) movie.get("name"));
+            vDescription.setText((String) movie.get("description"));
+            vIcon.setImageResource((Integer) movie.get("image"));
+            vCheckBox.setChecked((Boolean) movie.get("selection"));
+            vCheckBox.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View v) {
+
+
+                    if (vCheckBox.isChecked()) {
+                        ((Map<String,Boolean>) movie).put("selection", true);
+                    } else {
+                        ((Map<String,Boolean>) movie).put("selection", false);
+                    }
+
+                }
+            });
+
+            double r = (Double) movie.get("rating");
+            float f = (float)r / 2.0f;
+            vRating.setRating(f);
+        }
+    }
+}
