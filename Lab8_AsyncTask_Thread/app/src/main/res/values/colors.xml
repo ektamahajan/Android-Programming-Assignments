@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <color name="text_color">#800000</color>
+    <color name="actionBar">#37474F</color>
+    <color name="theme2">#90CAF9</color>
+    <color name="tab_selected">#8BC34A</color>
+    <color name="frontPage">#AED581</color>
+    <color name="actionBar2">#78909C</color>
+    <color name="cardviewcolor">#F8BBD0</color>
+    <color name="text">#000000</color>
+</resources>

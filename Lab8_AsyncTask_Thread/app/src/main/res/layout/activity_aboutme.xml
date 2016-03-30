@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/actionBar"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/textview1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/imgvi"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:textColor="@color/tab_selected"
+        android:text="Ekta Mahajan" />
+
+    <TextView
+        android:id="@+id/textview2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="15sp"
+        android:textColor="@color/tab_selected"
+        android:textStyle="bold"
+        android:layout_below="@id/textview1"
+        android:text="MS CS" />
+
+    <TextView
+        android:id="@+id/textview3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:textColor="@color/tab_selected"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:text="About Me"
+
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"/>
+    <TextView
+        android:id="@+id/textview4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/tab_selected"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/textview2"
+        android:layout_centerHorizontal="true"
+        android:text="   I am Computer Science grad student at Syracuse Univeristy. I have a keen interest in Mobile Application Prog and Web Development. My Hobbies (Activities I love to do in free time) are Traveling and exploring new places,Listening music,Cooking food and Dancing"/>
+
+    <ImageView
+
+        android:layout_width="200dp"
+        android:layout_height="250dp"
+        android:id="@+id/imgvi"
+        android:layout_below="@+id/textview3"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/me"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY"/>
+
+</RelativeLayout>
